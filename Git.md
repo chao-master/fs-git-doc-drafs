@@ -110,3 +110,6 @@ Regardless of the system used it is very important to note that this method <str
 <li>Delete remote branch <code>git push origin :release/&lt;version&gt;</code></li>
 </ol>
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbODE5OTI1NzRdfQ==
+-->
