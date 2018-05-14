@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Reminders</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="git-reminders">Git Reminders</h1>
+<h2 id="git-help">Git help</h2>
+<p>Run <code>git help [&lt;command&gt;]</code> for help on a command.</p>
+<h2 id="branch-names">Branch Names</h2>
+<ul>
+<li>Prefix Feature branch names with <code>feature/</code>, this groups them into a feature folder.</li>
+<li>Do not put <code>/</code>s in branch names, other than the <code>feature/</code> prefix</li>
+<li>Only use lower case in branch names, as they are case insensitive</li>
+<li>Do not use white space in branch names, as this prevents them being easily typed on the command line.</li>
+<li>Use <code>-</code> instead of spaces in branch names.</li>
+</ul>
+<h2 id="command-line">Command line</h2>
+<h3 id="command-line-args">Command line args</h3>
+<ul>
+<li>Single letter options start with one dash (<code>-</code>)</li>
+<li>Multiple letter (aka word) options start with two dashes (<code>--</code>)</li>
+<li>The special option <code>--</code> is used to separate options from file names, all parameters following the <code>--</code> are treated as file names.</li>
+<li>Single letter flags (options without and argument), can be immediately followed by another single letter option.<br>
+eg <code>git commit -asv</code> is equivalent to <code>git commit -a -s -v</code>, and <code>git commit -am "Fix capatalization</code> is equivalent to <code>git commit -a -m "Fix capatalization"</code></li>
+<li>All single letters options have longer equivalents. I advise writing these in examples as they can make it clearer what is happening.<br>
+eg <code>git commit -a</code> is the short version of <code>git commit --all</code></li>
+</ul>
+<h3 id="styling">Styling</h3>
+<ul>
+<li>Square brackets (<code>[]</code>) indicate something is optional. Pipes (<code>|</code>) inside square brackets indicate you can select zero or one of the options.<br>
+eg <code>-a</code>, <code>--interactive</code>, and <code>--patch</code> are all flags for <code>git commit</code>, but only 0 or 1 of them can be used, so the documentation shows <code>[-a | --interactive | --patch]</code></li>
+<li>Regular brackets (<code>()</code>) and pipes are used to indicate that you must use one of the options.</li>
+<li>Angled brackets (<code>&lt;&gt;</code>) are used to indicate where you place values.<br>
+eg. You would replace all of<code>&lt;msg&gt;</code> the message you want.</li>
+<li>Ellipses <code>…</code> indicate the previous parameter can be repeated multiple times, separated by spaces.<br>
+eg <code>&lt;file&gt;…</code> allows you to list several files</li>
+</ul>
+</div>
+</body>
+
+</html>
