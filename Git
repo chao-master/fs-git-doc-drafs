@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="git-flow">Git flow</h1>
+<h2 id="general-usage">General Usage</h2>
+<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-UkzNKKhMCWUVKaVt" height="100%" viewBox="0 0 753.35546875 764" style="max-width:753.35546875px;"><g><g class="output"><g class="clusters"><g class="cluster" id="subGraph1" transform="translate(332.923828125,190)" style="opacity: 1;"><rect width="625.84765625" height="340" x="-312.923828125" y="-170"></rect><g class="label"><g transform="translate(0,0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"></div></foreignObject></g></g><text x="0" y="-156" fill="black" stroke="none" id="mermaid-svg-UkzNKKhMCWUVKaVtText" style="text-anchor: middle;"> Working</text></g><g class="cluster" id="subGraph0" transform="translate(366.677734375,567)" style="opacity: 1;"><rect width="693.35546875" height="314" x="-346.677734375" y="-157"></rect><g class="label"><g transform="translate(0,0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"></div></foreignObject></g></g><text x="0" y="-143" fill="black" stroke="none" id="mermaid-svg-UkzNKKhMCWUVKaVtText" style="text-anchor: middle;"> Not Working</text></g></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M520.4608734631147,481L601.93359375,519L601.93359375,557" marker-end="url(#arrowhead947)" style="fill:none"></path><defs><marker id="arrowhead947" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M601.93359375,603L601.93359375,628L468.65234375,659.5244841392055" marker-end="url(#arrowhead948)" style="fill:none"></path><defs><marker id="arrowhead948" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M449.55500768442624,481L413.87890625,519L413.87890625,580L413.87890625,628L406.12744140625,653" marker-end="url(#arrowhead949)" style="fill:none"></path><defs><marker id="arrowhead949" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M409.6640625,473.86195503130625L234.69921875,519L234.69921875,557" marker-end="url(#arrowhead950)" style="fill:none"></path><defs><marker id="arrowhead950" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M234.69921875,603L234.69921875,628L329.33984375,655.6496433666191" marker-end="url(#arrowhead951)" style="fill:none"></path><defs><marker id="arrowhead951" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M248.76953125,74.75506685318325L569.1015625,129L508.08158299180326,167" marker-end="url(#arrowhead952)" style="fill:none"></path><defs><marker id="arrowhead952" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M431.7173411885246,167L366.5703125,129L248.76953125,83.43094949094602" marker-end="url(#arrowhead953)" style="fill:none"></path><defs><marker id="arrowhead953" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M508.52491034836066,213L570.27734375,251L570.27734375,312L570.27734375,360L570.27734375,385L570.27734375,410L518.647705078125,435" marker-end="url(#arrowhead954)" style="fill:none"></path><defs><marker id="arrowhead954" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M449.24276383196724,213L413.05078125,251L413.05078125,289" marker-end="url(#arrowhead955)" style="fill:none"></path><defs><marker id="arrowhead955" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M413.05078125,335L413.05078125,360L413.05078125,385L413.05078125,410L443.3099772135417,435" marker-end="url(#arrowhead956)" style="fill:none"></path><defs><marker id="arrowhead956" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M218.3522669057377,91L234.00390625,129L234.00390625,167" marker-end="url(#arrowhead957)" style="fill:none"></path><defs><marker id="arrowhead957" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M234.00390625,213L234.00390625,251L204.4429431352459,289" marker-end="url(#arrowhead958)" style="fill:none"></path><defs><marker id="arrowhead958" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M168.6586193647541,289L139.09765625,251L139.09765625,190L139.09765625,129L182.5679431352459,91" marker-end="url(#arrowhead959)" style="fill:none"></path><defs><marker id="arrowhead959" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M329.33984375,665.6019534239585L77.4453125,628L77.4453125,580L77.4453125,519L77.4453125,458L77.4453125,410L77.4453125,385L77.4453125,360L77.4453125,312L77.4453125,251L77.4453125,190L77.4453125,129L168.98828125,86.51374565340149" marker-end="url(#arrowhead960)" style="fill:none"></path><defs><marker id="arrowhead960" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(601.93359375,519)" style="opacity: 1;"><g transform="translate(-53.5546875,-13)" class="label"><foreignObject width="107.109375" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Start new work</span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(413.87890625,580)" style="opacity: 1;"><g transform="translate(-76.6328125,-13)" class="label"><foreignObject width="153.265625" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Resume existing work</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(234.69921875,519)" style="opacity: 1;"><g transform="translate(-77.765625,-13)" class="label"><foreignObject width="155.53125" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Pickup another's work</span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(569.1015625,129)" style="opacity: 1;"><g transform="translate(-45.234375,-13)" class="label"><foreignObject width="90.46875" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Publish work</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(366.5703125,129)" style="opacity: 1;"><g transform="translate(-62.6171875,-13)" class="label"><foreignObject width="125.234375" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Continue working</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(570.27734375,312)" style="opacity: 1;"><g transform="translate(-42.8828125,-13)" class="label"><foreignObject width="85.765625" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Shelve work</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(413.05078125,251)" style="opacity: 1;"><g transform="translate(-62.1875,-13)" class="label"><foreignObject width="124.375" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Submit for review</span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(234.00390625,129)" style="opacity: 1;"><g transform="translate(-19.3515625,-13)" class="label"><foreignObject width="38.703125" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Work</span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" id="wrk" transform="translate(208.87890625,68)" style="opacity: 1;"><rect rx="5" ry="5" x="-39.890625" y="-23" width="79.78125" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-29.890625,-13)"><foreignObject width="59.78125" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Working</div></foreignObject></g></g></g><g class="node" id="psh" transform="translate(471.1484375,190)" style="opacity: 1;"><rect rx="0" ry="0" x="-53.2578125" y="-23" width="106.515625" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-43.2578125,-13)"><foreignObject width="86.515625" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Push branch</div></foreignObject></g></g></g><g class="node" id="not" transform="translate(471.1484375,458)" style="opacity: 1;"><rect rx="5" ry="5" x="-61.484375" y="-23" width="122.96875" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-51.484375,-13)"><foreignObject width="102.96875" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Doing Nothing</div></foreignObject></g></g></g><g class="node" id="rev" transform="translate(413.05078125,312)" style="opacity: 1;"><rect rx="0" ry="0" x="-76.625" y="-23" width="153.25" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-66.625,-13)"><foreignObject width="133.25" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Create pull request</div></foreignObject></g></g></g><g class="node" id="chg" transform="translate(234.00390625,190)" style="opacity: 1;"><rect rx="0" ry="0" x="-59.90625" y="-23" width="119.8125" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-49.90625,-13)"><foreignObject width="99.8125" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Make changes</div></foreignObject></g></g></g><g class="node" id="cmt" transform="translate(186.55078125,312)" style="opacity: 1;"><rect rx="0" ry="0" x="-68.3046875" y="-23" width="136.609375" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-58.3046875,-13)"><foreignObject width="116.609375" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Commit changes</div></foreignObject></g></g></g><g class="node" id="Cre" transform="translate(601.93359375,580)" style="opacity: 1;"><rect rx="0" ry="0" x="-76.421875" y="-23" width="152.84375" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-66.421875,-13)"><foreignObject width="132.84375" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Create new branch</div></foreignObject></g></g></g><g class="node" id="chk" transform="translate(398.99609375,676)" style="opacity: 1;"><rect rx="0" ry="0" x="-69.65625" y="-23" width="139.3125" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-59.65625,-13)"><foreignObject width="119.3125" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Checkout branch</div></foreignObject></g></g></g><g class="node" id="plo" transform="translate(234.69921875,580)" style="opacity: 1;"><rect rx="0" ry="0" x="-67.546875" y="-23" width="135.09375" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-57.546875,-13)"><foreignObject width="115.09375" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Pull their branch</div></foreignObject></g></g></g></g></g></g></svg></div>
+<h2 id="starting-different-kinds-of-branches">Starting different kinds of branches</h2>
+
+<table>
+<thead>
+<tr>
+<th>What kind of work needs doing?</th>
+<th>Branch to start from</th>
+<th>Branch to merge to</th>
+<th>Branch prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A new feature</td>
+<td><code>dev</code></td>
+<td><code>dev</code></td>
+<td><code>feature/</code></td>
+</tr>
+<tr>
+<td>A bug fix for a critical problem on live</td>
+<td><code>master</code></td>
+<td><code>master</code> &amp; <code>dev</code></td>
+<td><code>hotfix/</code></td>
+</tr>
+<tr>
+<td>A bug fix for a problem on dev or a non-critial problem on live</td>
+<td><code>dev</code></td>
+<td><code>dev</code></td>
+<td><code>bugfix/</code></td>
+</tr>
+<tr>
+<td>A bug fix for a critical issue found while UAT testing</td>
+<td><code>release/...</code></td>
+<td><code>release/...</code> &amp; <code>dev</code></td>
+<td><code>bugfix/</code></td>
+</tr>
+</tbody>
+</table><p>Before starting new work, you should insure the branch you are starting from is up to date.</p>
+<h3 id="features">Features</h3>
+<p>Normally each new user story will describe a new feature and be implemented on it’s own feature branch.<br>
+New features are always started from the dev branch,and merged back to the dev branch (through a pull request)<br>
+New features are only released to the client via the release process.</p>
+<h3 id="bugfixes">Bugfixes</h3>
+<p>Depending on the severity of the bug and where the bug is present there is 3 diffrent ways the bugfixing is done</p>
+<h4 id="bugs-on-dev">- Bugs on <code>dev</code></h4>
+<p>If the bug is a problem that exists on <code>dev</code>, but not <code>master</code>; or the bug exists on <code>master</code>, but is not critical, then the bug fix is done on the <code>dev</code> branch. These bug fixes are done in much the the same way that a feature is done, but often prefixed with <code>bugfix/</code> instead of <code>feature/</code>.</p>
+<h4 id="bugs-on-master-hotfixes">- Bugs on <code>master</code> (hotfixes)</h4>
+<p>If the bug is a critical problem on <code>master</code>, then a hot fix is done. The hot fix branch starts off the master branch, is prefixed with <code>hotfix/</code> and when it’s completed, is merged to both <code>dev</code> and <code>master</code>. After being merged into master, the bug fix is released to the client.<br>
+For more information see hotfixes.</p>
+<h4 id="bugs-on-release...">- Bugs on <code>release/...</code></h4>
+<p>If the bug is found during the release process, then a bug fix branch should be created off of the release branch. Once the work is done, the bug fix should be merged back into the <code>release/...</code> branch and <code>dev</code>. Finally the release process can be continued.</p>
+<h2 id="doing-a-release">Doing a Release</h2>
+<p>A “release” here refers to the whole release process of:</p>
+<ol>
+<li>Feature locking the sprint</li>
+<li>Building a version for testers to test</li>
+<li>Fixing any critial bugs found</li>
+<li>Building the Release version</li>
+<li>Ending the Release procedure</li>
+</ol>
+<p>Actually giving the release to the client is out of the scope of this document as it varies based on deployment methods.<br>
+This guide covers the manual process of doing release branches, which could be automated.</p>
+<h3 id="feature-locking-the-sprint">Feature locking the sprint</h3>
+<p>Once a release has been started no new features should be included in what will be released, this is know as feature locking. Feature locking is important for two reasons, it prevents your test team having to account for new features that they don’t have time to test, and it helps focus the dev team into fixing the critical bugs.<br>
+Feature locking in git flow is done by creating an isolated release branch.</p>
+<ol>
+<li>Insure <code>dev</code> is up to date.<br>
+<code>git fetch origin dev:dev</code></li>
+<li>Branch <code>dev</code> to create the release branch, release branches are named according to the scheme <code>release/&lt;version&gt;</code>.<br>
+<code>git branch release/&lt;version&gt; dev</code></li>
+<li>Push the release branch.<br>
+<code>git push --set-upstream origin release/&lt;version&gt;:release/&lt;version&gt;</code></li>
+</ol>
+<h3 id="building-the-latest-version">Building the latest version</h3>
+<p>Build definitions should be made configurable so they can point to the required release branches instead of a static branch.<br>
+You may also want to either manually or automatically update the version number for each build to help keep track (see discussion on versioning)</p>
+<h3 id="fixing-any-ciritical-bugs-found">Fixing any ciritical bugs found</h3>
+<p>See <a href="#bugs-on-release...">Bugs on release</a> above for how to resolve a bug found on the release branch.<br>
+Once resolved the branch can be built again as before.</p>
+<h3 id="building-the-release-version">Building the Release version</h3>
+<p>Before building the release version insure the final version number and other meta data is set correctly, the proceed to do the build with the correct enviroment.</p>
+<h3 id="ending-the-release-procedure">Ending the release Procedure</h3>
+<p>Once the release is completed the release branch needs to be merged to both <code>master</code> and <code>dev</code>, then the branch can be deleted.</p>
+<h4 id="merging-the-branches">- Merging the branches</h4>
+<p>The easiest way to do the merges is via the pull request system, as this will allow it to work without needing to edit permissions. However super admins, or scripts, should use the manual system described below.<br>
+Regardless of the system used it is very important to note that this method <strong>should not be followed</strong> if there is merge conflicts, as something has gone terribly wrong.</p>
+<ol>
+<li>Checkout the <code>master</code> branch <code>git checkout master</code></li>
+<li>Insure it is up to date <code>git pull</code></li>
+<li>Insure the release branch is up to date <code>git fetch origin release/&lt;version&gt;:release/&lt;version&gt;</code></li>
+<li>Merge the release branch into master <code>git merge --no-ff release/&lt;version&gt;</code>
+<ul>
+<li>The <code>--no-ff</code> flag signifies that a new merge commit should always be created, even if a fast forward is possible, this is necessary to preserve the history structure.</li>
+</ul>
+</li>
+<li>Push the master branch <code>git push origin master</code></li>
+</ol>
+<p>Then repeat these steps for the <code>dev</code> branch (swapping out all cases of <code>master</code> for <code>dev</code>)</p>
+<h4 id="deleting-the-release-branch">- Deleting the release branch</h4>
+<ol>
+<li>Delete locally <code>git branch --delete release/&lt;version&gt;</code></li>
+<li>Delete remote branch <code>git push origin :release/&lt;version&gt;</code></li>
+</ol>
+</div>
+</body>
+
+</html>
