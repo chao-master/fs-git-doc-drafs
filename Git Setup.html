@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Setup</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="git-setup">Git Setup</h1>
+<p>This guide will guide you through the process of creating a new git repository and setting it up for git flow usage.</p>
+<h2 id="create-repository">Create Repository</h2>
+<p>The first action is to create the repository on tfs, this part must be taken even if you have local code already existing.</p>
+<ol>
+<li>Open the project on tfs
+<ol>
+<li>Open <a href="tfs.felinesoft.com/tfs">tfs</a></li>
+<li>Browse to the project in question</li>
+</ol>
+</li>
+<li>Select the “CODE” tab</li>
+<li>Select to repository drop down</li>
+<li>Select “New repository”</li>
+<li>Set Type to Git</li>
+<li>Enter an appropriate name</li>
+<li>Click Create</li>
+</ol>
+<h2 id="setup-branches-bare-repository">Setup branches (Bare repository)</h2>
+<p>This part is for initializing branches when you do not already have code you wish to upload, regardless of if it is in a repository or not.<br>
+See <a href="#setup-branches-existing-code">Setup branches (Existing code)</a> If you have code already.<br>
+See <a href="#setup-branches-existing-repository">Setup branches (Existing repository)</a> If you have a git repo setup already.</p>
+<ol>
+<li>Copy the instruction for “Clone this repository”</li>
+<li>Click the “Create a ReadMe file” at the bottom of the page</li>
+<li>Open git bash</li>
+<li>Navigate to the folder that will contain the repository, (or a temporary folder)</li>
+<li>Run the copied instruction</li>
+<li>Navigate into the new folder</li>
+<li>Run <code>git checkout -b dev</code> to create your dev branch (alternative names include devlelop)</li>
+<li>Run <code>git push --set-upstream origin dev</code> to push to <code>dev</code> and setup the upstream tracking</li>
+</ol>
+<h2 id="setup-branches-existing-code">Setup branches (Existing code)</h2>
+<p>This part is for initializing branches when you already have code, but not a git repository.</p>
+<ol>
+<li>Open git bash</li>
+<li>Navigate to the folder containing the code to push</li>
+<li>Run <code>git init</code></li>
+<li>Create an appropriate git ignore file, github has one for C# visual studio projects</li>
+<li>Run <code>git add -A</code></li>
+<li>Run <code>git commit</code> and provide a good commit message</li>
+<li>Continue with the steps in <a href="#setup-branches-existing-repository">Setup branches (Existing Repository)</a></li>
+</ol>
+<h2 id="setup-branches-existing-repository">Setup branches (Existing Repository)</h2>
+<p>This part is for initializing branches when you already have a git repository, but but the branches are not correct.</p>
+<ol>
+<li>In the repository view of the web browser, copy the first code snippet under “Push an existing repository”</li>
+<li>Open git bash</li>
+<li>Navigate to the git repository</li>
+<li>Run the copied instruction</li>
+<li>Run <code>git push --set-upstream origin master:master</code></li>
+<li>Run <code>git branch dev master</code> to create your dev branch (alternative names include devlelop)</li>
+<li>Run <code>git push --set-upstream origin dev:dev</code> to push to <code>dev</code> and setup the upstream tracking</li>
+</ol>
+<h2 id="setup-permissions">Setup permissions</h2>
+<p>Permissions are setup to prevent accidental pushing of changes directly to the <code>dev</code> and <code>master</code> and instead require everything to go though pull requests so they can be reviewed.</p>
+<ol>
+<li>Open the repository back up in your web browser</li>
+<li>Select the repository drop down</li>
+<li>Select Manage repositories</li>
+<li>From the list expand your repositroy</li>
+<li>Select the “Security” tab</li>
+<li>Select “Contribtors” (or your main group of workers)</li>
+<li>Set “Exempt from policy enforcement” to “Deny”</li>
+<li>Save Changes</li>
+<li>Select the <code>dev</code> branch</li>
+<li>Select the “Branch Polices” tab</li>
+<li>Check “Require a minimum number of reviewers per pull request”
+<ul>
+<li>You <strong>must</strong> enable code reviews, however if you do not want to have to enforce them you can set the Minimum number of reviewers to 1, and check “Allow users to approve their own changes”. This is not recommended.</li>
+</ul>
+</li>
+<li>Save changes</li>
+<li>Select the <code>master</code> branch</li>
+<li>Select the “Security branch” tab</li>
+<li>Select “Contributors” (or your main group of workers)</li>
+<li>Set “Contribute” to “Deny”</li>
+<li>Save changes</li>
+</ol>
+</div>
+</body>
+
+</html>
