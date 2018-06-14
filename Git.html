@@ -51,19 +51,39 @@
 </tbody>
 </table><p>Before starting new work, you should insure the branch you are starting from is up to date.</p>
 <h3 id="features">Features</h3>
+<canvas class="gitgraph">
+  dev -> feature/implement-the-thing -> dev
+</canvas>
 <p>Normally each new user story will describe a new feature and be implemented on it’s own feature branch.<br>
 New features are always started from the dev branch,and merged back to the dev branch (through a pull request)<br>
 New features are only released to the client via the release process.</p>
 <h3 id="bugfixes">Bugfixes</h3>
 <p>Depending on the severity of the bug and where the bug is present there is 3 diffrent ways the bugfixing is done</p>
 <h4 id="bugs-on-dev">- Bugs on <code>dev</code></h4>
+<canvas class="gitgraph">
+  dev -> bugfix/fix-the-bug -> dev
+</canvas>
 <p>If the bug is a problem that exists on <code>dev</code>, but not <code>master</code>; or the bug exists on <code>master</code>, but is not critical, then the bug fix is done on the <code>dev</code> branch. These bug fixes are done in much the the same way that a feature is done, but often prefixed with <code>bugfix/</code> instead of <code>feature/</code>.</p>
 <h4 id="bugs-on-master-hotfixes">- Bugs on <code>master</code> (hotfixes)</h4>
+<canvas class="gitgraph">
+  master -> !c1 -> !tRelease v1.0.0
+  master -> hotfix/critital-bug-fix -> master, dev
+  master -> !tRelease v1.0.1
+</canvas>
 <p>If the bug is a critical problem on <code>master</code>, then a hot fix is done. The hot fix branch starts off the master branch, is prefixed with <code>hotfix/</code> and when it’s completed, is merged to both <code>dev</code> and <code>master</code>. After being merged into master, the bug fix is released to the client.<br>
 For more information see hotfixes.</p>
 <h4 id="bugs-on-release...">- Bugs on <code>release/...</code></h4>
+<canvas class="gitgraph">
+  dev -> release/va.b.c
+  release/va.b.c -> bugfix/important -> release/va.b.c, dev, !close
+  release/va.b.c -> bugfix/less-important -> release/va.b.c, !close
+</canvas>
 <p>If the bug is found during the release process, then a bug fix branch should be created off of the release branch. Once the work is done, the bug fix should be merged back into the <code>release/...</code> branch and <code>dev</code>. Finally the release process can be continued.</p>
 <h2 id="doing-a-release">Doing a Release</h2>
+<canvas class="gitgraph">
+  dev -> release/va.b.c -> master, dev, !close
+  master -> !tRelease va.b.c
+</canvas>
 <p>A “release” here refers to the whole release process of:</p>
 <ol>
 <li>Feature locking the sprint</li>
@@ -116,6 +136,8 @@ Regardless of the system used it is very important to note that this method <str
 <li>Delete remote branch <code>git push origin :release/&lt;version&gt;</code></li>
 </ol>
 </div>
+
+<script src="res/git-graph-parser.js"></script>
 </body>
 
 </html>
